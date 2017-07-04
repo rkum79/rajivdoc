@@ -7,6 +7,8 @@ This **Dockerfile** is a **trusted build** del2vmplidoweb01:80/oraclexe11:v02
 
 ### Installation(with Ubuntu 16.04)
 ```
+###### Download the docker image:
+```
 docker pull del2vmplidoweb01:80/oraclexe11:v02
 ```
 
@@ -20,7 +22,7 @@ docker run -d -p 22:22 -p 1521:1521 del2vmplidoweb01:80/oraclexe11:v02
 docker run -d -p 22:22 -p 1521:1521 -e ORACLE_ALLOW_REMOTE=true del2vmplidoweb01:80/oraclexe11:v02
 ```
 
-###### **Connect database with following setting:**
+###### *Connect database with following setting:
 ```
 hostname: localhost
 port: 1521
