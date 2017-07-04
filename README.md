@@ -11,6 +11,7 @@ docker pull del2vmplidoweb01:80/oraclexe11:v02
 ```
 
 ###### Run with 22 and 1521 ports opened:
+-----------------------------------------
 ```
 docker run -d -p 22:22 -p 1521:1521 del2vmplidoweb01:80/oraclexe11:v02
 ```
@@ -21,6 +22,7 @@ docker run -d -p 22:22 -p 1521:1521 -e ORACLE_ALLOW_REMOTE=true del2vmplidoweb01
 ```
 
 ###### Connect database with following setting:
+-----------------------------------------------
 ```
 hostname: localhost
 port: 1521
