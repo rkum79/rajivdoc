@@ -1,4 +1,3 @@
-```diff
 Docker Oracle-xe-11.2g Database
 ===============================
 
