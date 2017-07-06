@@ -15,7 +15,7 @@ Can be used Out-Of-The-Box for projects based on Hybris Commerce Suite >6.0.0.0
 * unzip
 * bc
 * curl
-* oracle java 8 (server jre 8u101) [but it`s removed when hybris is installed]
+* oracle java 8 (server jre 8u101) `But java will removed when hybris is installed`
 
 #### User
 
@@ -72,9 +72,10 @@ They will be used to add the properties in second column to ``local.properties``
 
 #### How to use
 
-As this image is just a base for running SAP Hybris you need to either copy your own production artefacts in and commit the result as your own image or mount a directory containing them.
+As this image is just for Whirlpool for running SAP Hybris you need to either copy your own production artefacts in and commit the result as your own image or mount a directory containing them.
 For the latter no own images are needed.
 
+In Whirlpool Project we have created directory in D: drive for code
 
 This **Dockerfile** is a **trusted build** del2vmplidoweb01:80/hybriswp:v01
 
