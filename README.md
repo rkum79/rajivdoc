@@ -3,8 +3,8 @@ Docker E-commerce Hybris Application
 
 ## Hybris Application **hybris-commerce-suite** Edition 6 Release 0 on **CENTOS 7**
 
-###Expose Hybris and JDK volumes 
-
+Expose Hybris and JDK volumes 
+'''''''''''''''''''''''''''''
 ```
 change the VOLUME code
 *NOTE : VOLUME may vary from project to project 
