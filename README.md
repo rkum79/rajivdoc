@@ -23,22 +23,60 @@ Can be used Out-Of-The-Box for projects based on Hybris Commerce Suite >6.0.0.0
 |--------|--------|------|------|
 | hybris | hybris | 1000 | 1000 |
 
+The hybris home directory `/home/hybris`
+
 #### Ports
 
 | Port | Purpose            |
 |------|--------------------|
 | 9001 | default HTTP port  |
 | 9002 | default HTTPS port |
-| 8983 | default SOLR port  |
-| 8000 | default DEBUG port |
-```
-change the VOLUME code
-**NOTE** : VOLUME may vary from project to project 
-```
+| 9003 | default SOLR port  |
+
+The image exposes ``9001`` and ``9002`` for access to the hybris Tomcat server via HTTP and HTTPS.
+
+#### Volumes
+
+| VOLUME           | Purpose (Whirlpool project)   |
+|------------------|-------------------------------|
+| /usr/local/java  | This id use for extranal java |
+| /app/hybris/log  | This is log file              |
+| /app/hybris/data | This is for data extranalize  |
+| /app/extensions  | This is for whirlpool code    |
+| /app/config      | This is for whirlpool config  |
+
+**Note - _Valumes and code may vary from project to project_**.
+
+#### Configuration support
+
+For support of different database configurations per container the following environment variables can be set when starting a container.
+They will be used to add the properties in second column to ``local.properties`` file.
+
+| Environment variable | local.properties          								|
+|----------------------|--------------------------------------------------------|
+| HYBRIS_DB_URL        | db.url=$HYBRIS_DB_URL           						|
+| HYBRIS_DB_DRIVER     | db.driver=$HYBRIS_DB_DRIVER     						|
+| HYBRIS_DB_USER       | db.username=$HYBRIS_DB_USER    						|
+| HYBRIS_DB_PASSWORD   | db.password=$HYBRIS_DB_PASSWORD 						|
+| HYBRIS_DATAHUB_URL   | datahubadapter.datahuboutbound.url=$HYBRIS_DATAHUB_URL |
+
+#ORACLE DB SETTINGS WITH ORACLE IMAGE for Example only
+
+| Environment variable | local.properties          								|
+|----------------------|--------------------------------------------------------|
+| HYBRIS_DB_URL        | db.url=jdbc:oracle:thin:@oraclexewhp:1521:xe			|
+| HYBRIS_DB_DRIVER     | db.driver=oracle.jdbc.driver.OracleDriver  			|
+| HYBRIS_DB_USER       | db.username=hybris    				            		|
+| HYBRIS_DB_PASSWORD   | db.password=hybris             						|
+
+
+#### How to use
+
+As this image is just a base for running SAP Hybris you need to either copy your own production artefacts in and commit the result as your own image or mount a directory containing them.
+For the latter no own images are needed.
+
 
 This **Dockerfile** is a **trusted build** del2vmplidoweb01:80/hybriswp:v01
-
-### Installation(with CENTOS 7)
 
 #### Download the docker image:
 ```
@@ -50,4 +88,4 @@ docker pull del2vmplidoweb01:80/hybriswp:v01
 docker run -d -p 9001:9001 -p 9002:9002 -p 9002:9002 del2vmplidoweb01:80/hybriswp:v01
 ```
 
-#### Note : This is depends_on JAVA (JDK image del2vmplidoweb01:80/jdk8u131:v01)
+#### Note : JAVA image is depencency to run the hybris image (JDK image del2vmplidoweb01:80/jdk8u131:v01)
