@@ -1,45 +1,27 @@
-Docker Oracle-xe-11.2g Database
-===============================
+Docker E-commerce Hybris Application
+====================================
 
-## Oracle Express Edition 11g Release 2 on Ubuntu 16.04 LTS
+## Hybris Application **hybris-commerce-suite** Edition 6 Release 0 on **CENTOS 7**
 
-This **Dockerfile** is a **trusted build** del2vmplidoweb01:80/oraclexe11:v02
+###Expose Hybris and JDK volumes 
 
-### Installation(with Ubuntu 16.04)
+```
+change the VOLUME code
+*NOTE : VOLUME may vary from project to project 
+```
+
+This **Dockerfile** is a **trusted build** del2vmplidoweb01:80/hybriswp:v01
+
+### Installation(with CENTOS 7)
 
 #### Download the docker image:
 ```
-docker pull del2vmplidoweb01:80/oraclexe11:v02
+docker pull del2vmplidoweb01:80/hybriswp:v01
 ```
 
-#### Run with 22 and 1521 ports opened:
+#### Run with 9001, 9002 and 9003 ports opened:
 ```
-docker run -d -p 22:22 -p 1521:1521 del2vmplidoweb01:80/oraclexe11:v02
-```
-
-#### Run this, if you want the database to be connected remotely:
-```
-docker run -d -p 22:22 -p 1521:1521 -e ORACLE_ALLOW_REMOTE=true del2vmplidoweb01:80/oraclexe11:v02
+docker run -d -p 9001:9001 -p 9002:9002 -p 9002:9002 del2vmplidoweb01:80/hybriswp:v01
 ```
 
-#### Connect database with following setting:
-```
-hostname: localhost
-port: 1521
-sid: xe
-username: oracle
-password: oracle
-```
-#### Connect database with following setting for Hybris Schema:
-```
-hostname: localhost
-port: 1521
-sid: xe
-username: hybris
-password: hybris
-```
-#### Oracle Login by SSH
-```
-ssh root@localhost -p 22
-password: admin
-```
+#### Note : This is depends_on JAVA (JDK image del2vmplidoweb01:80/jdk8u131:v01)
