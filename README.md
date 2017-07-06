@@ -3,8 +3,34 @@ Docker E-commerce Hybris Application
 
 ## Hybris Application **hybris-commerce-suite** Edition 6 Release 0 on **CENTOS 7**
 
-### Expose Hybris and JDK volumes:
+A base image for Hybris Commerce Suite, based on CENTOS 7.
 
+Can be used Out-Of-The-Box for projects based on Hybris Commerce Suite >6.0.0.0
+
+#### Installed packages
+
+* gzip
+* zip
+* lsof
+* unzip
+* bc
+* curl
+* oracle java 8 (server jre 8u101) [but it`s removed when hybris is installed]
+
+#### User
+
+| User   | Group  | uid  | gid  |
+|--------|--------|------|------|
+| hybris | hybris | 1000 | 1000 |
+
+#### Ports
+
+| Port | Purpose            |
+|------|--------------------|
+| 9001 | default HTTP port  |
+| 9002 | default HTTPS port |
+| 8983 | default SOLR port  |
+| 8000 | default DEBUG port |
 ```
 change the VOLUME code
 **NOTE** : VOLUME may vary from project to project 
