@@ -19,14 +19,16 @@
 ## INSTALLATION STEPS:
 
 	
-A.	Steps for Docker installation and configuration :
 
-###   1.	Download and install latest stable Docker Toolbox on your Windows machine using below URL. Go with default settings
+### A.	Steps for Docker installation and configuration :
+
+
+####   1.	Download and install latest stable Docker Toolbox on your Windows machine using below URL. Go with default settings
 https://docs.docker.com/toolbox/toolbox_install_windows
 
    - **Note:** if your system already have Docker Toolbox setup in place, than make sure that you have ‘Oracle VM Virtual Box” version equal or higher than 5.1.18 and boot2docker version higher than v17.04.0. if not, than recommended to uninstall it and re-install the latest version, as new boot2docker VM ships with features that we are leveraging in our setup.
 	
-###   2.	Docker toolbox includes below listed tools:
+####   2.	Docker toolbox includes below listed tools:
 
 | Tools                      | Purpose                                                                |
 |----------------------------|------------------------------------------------------------------------|
@@ -36,7 +38,7 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 | Docker Quickstart terminal | Preconfigured terminal to access Docker Engine over CLI                |
 | Docker engine exe          | Running docker Server                                                  |
 	
-###   3.	Update the file start.sh located under Docker Toolbox installation path `i.e. “C:\Program Files\Docker Toolbox\start.sh”`,  to allocate required CPU, Memory and Storage to window docker virtual machine which is boot2docker VM
+####   3.	Update the file start.sh located under Docker Toolbox installation path `i.e. “C:\Program Files\Docker Toolbox\start.sh”`,  to allocate required CPU, Memory and Storage to window docker virtual machine which is boot2docker VM
   - Take the backup of start.sh file first
   - Find line `["${DOCKER_MACHINE}" create -d virtualbox $PROXY_ENV "${VM}"]`
   - Comment this line and add below one:
@@ -45,7 +47,10 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 ```
   - Save the file.
 
-#### 4.	Take the backup of config.json file first & Update config.json file located at “C:\Users\<NT-ID>\.docker\machine\machines\default” and add [“del2vmplidoweb01:80”] under “InsecureRegistry”: [ ] section, final syntax is like :-
+  
+
+
+####  4.	Take the backup of config.json file first & Update config.json file located at “C:\Users\<NT-ID>\.docker\machine\machines\default” and add [“del2vmplidoweb01:80”] under “InsecureRegistry”: [ ] section, final syntax is like :-
 
 ```
    "InsecureRegistry": [
@@ -54,7 +59,10 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 ```
 `Doing this we are allowing docker engine to download the images from untrusted docker registry.`
 
-#### 5.	Once Step 3 is completed, then go to the Desktop
+
+
+
+####  5.	Once Step 3 is completed, then go to the Desktop
 
   - `Double click on “Docker Quickstart Terminal”`
 	
@@ -66,14 +74,18 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 
   - Right click on `“Default”` ~ `Settings` ~ `System` ~ `Under MotherBoard Tab` (Check the Base Memory size, it should be 8000MB).  
   - Within same `System Tab` `Under Processor` ( check #processor is set to 2) 
+  
 
-#### 6.	Steps to share folder (which we created in prerequisite section) from Windows drive to virtual machine:
+
+####  6.	Steps to share folder (which we created in prerequisite section) from Windows drive to virtual machine:
 
   - Go to `“Oracle VM Virtual Box”` console
   - First stop the `“default”` named virtual machine
   - Select `“default”` named virtual machine and then click on `“Settings”` button
   - Select `“Shared Folders”` and start adding using `“Plus +”` button, Locate the folders which you created as part of `“Pre-requisite”` section. Make sure to choose the `“Auto-mount”` options while adding shared storage
   - Add all 4 shared folder, once done start the `“default”` virtual machine by right-click `Start` `Normal Start`.
+  
+
 
 #### 7. Please add the below DB properties in local.propreties file
   - Open the local.properties file located at “D:\Whirlpool\sandbox\config\local\” and add the below line
@@ -85,11 +97,15 @@ https://docs.docker.com/toolbox/toolbox_install_windows
      db.driver=oracle.jdbc.driver.OracleDriver
 ```
   
+
+
 #### 8.	Now go to the Docker Quickstart Terminal and run below command to set the environment
   - `# eval $(docker-machine.exe env default)`  
   - Downloade docker-compose.yml file under “C:\Users\<NT-ID>”, using attached one
   - Run below command to create the multi container stack
   - `# docker-compose.exe up -d`
+
+  
 
 #### 9.	Once all containers created and started, follow the below instructions to access different sections
   - Access GUI using your docker-machine IP Open “mstsc”, enter 192.168.99.100:3389 and GUI will be opened
