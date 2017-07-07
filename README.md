@@ -64,7 +64,7 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 
 - Inside “Oracle VM VirtualBox” select “default” VM
 
-- Right click on “Default” Settings System Under MotherBoard Tab (Check the Base Memory size, it should be 8000MB).  
+- Right click on `“Default”` ~ `Settings` ~ `System` ~ `Under MotherBoard Tab` (Check the Base Memory size, it should be 8000MB).  
 - Within same System TabUnder Processor ( check #processor is set to 2) 
 
 #### 6.	Steps to share folder (which we created in prerequisite section) from Windows drive to virtual machine:
