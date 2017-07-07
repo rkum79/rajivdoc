@@ -21,12 +21,12 @@
 	
 A.	Steps for Docker installation and configuration :
 
-#### 1.	Download and install latest stable Docker Toolbox on your Windows machine using below URL. Go with default settings
+###   1.	Download and install latest stable Docker Toolbox on your Windows machine using below URL. Go with default settings
 https://docs.docker.com/toolbox/toolbox_install_windows
 
    - **Note:** if your system already have Docker Toolbox setup in place, than make sure that you have ‘Oracle VM Virtual Box” version equal or higher than 5.1.18 and boot2docker version higher than v17.04.0. if not, than recommended to uninstall it and re-install the latest version, as new boot2docker VM ships with features that we are leveraging in our setup.
 	
-### 2.	Docker toolbox includes below listed tools:
+###   2.	Docker toolbox includes below listed tools:
 
 | Tools                      | Purpose                                                                |
 |----------------------------|------------------------------------------------------------------------|
@@ -36,7 +36,7 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 | Docker Quickstart terminal | Preconfigured terminal to access Docker Engine over CLI                |
 | Docker engine exe          | Running docker Server                                                  |
 	
-#### 3.	Update the file start.sh located under Docker Toolbox installation path `i.e. “C:\Program Files\Docker Toolbox\start.sh”`,  to allocate required CPU, Memory and Storage to window docker virtual machine which is boot2docker VM
+###   3.	Update the file start.sh located under Docker Toolbox installation path `i.e. “C:\Program Files\Docker Toolbox\start.sh”`,  to allocate required CPU, Memory and Storage to window docker virtual machine which is boot2docker VM
   - Take the backup of start.sh file first
   - Find line `["${DOCKER_MACHINE}" create -d virtualbox $PROXY_ENV "${VM}"]`
   - Comment this line and add below one:
