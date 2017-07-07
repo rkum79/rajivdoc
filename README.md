@@ -26,9 +26,9 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 
    - **Note:** if your system already have Docker Toolbox setup in place, than make sure that you have ‘Oracle VM Virtual Box” version equal or higher than 5.1.18 and boot2docker version higher than v17.04.0. if not, than recommended to uninstall it and re-install the latest version, as new boot2docker VM ships with features that we are leveraging in our setup.
 	
-#### 2.	Docker toolbox includes below listed tools:   
-      ..* Oracle Virtual box - where virtual machines gets created
-	  ..* Kitematic GUI - GUI to manage docker containers
+** 2.	Docker toolbox includes below listed tools:**   
+   ..* Oracle Virtual box - where virtual machines gets created
+   ..* Kitematic GUI - GUI to manage docker containers
 	  - `Docker machine –to create virtual machines in Virtual box`
 	  - `Docker Quickstart terminal – Preconfigured terminal to access Docker Engine over CLI`
 	  - `Docker engine exe – Running docker Server`
