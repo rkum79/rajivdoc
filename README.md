@@ -30,12 +30,12 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 ```  
     a) Oracle Virtual box - where virtual machines gets created
     b) Kitematic GUI - GUI to manage docker containers
-	c) Docker machine –to create virtual machines in Virtual box
-	d) Docker Quickstart terminal – Preconfigured terminal to access Docker Engine over CLI
-	e) Docker engine exe – Running docker Server
+    c) Docker machine –to create virtual machines in Virtual box
+    d) Docker Quickstart terminal – Preconfigured terminal to access Docker Engine over CLI
+    e) Docker engine exe – Running docker Server
 ```
 	
-#### 3.	Update the file start.sh located under Docker Toolbox installation path i.e. “C:\Program Files\Docker Toolbox\start.sh”,  to allocate required CPU, Memory and Storage to window docker virtual machine which is boot2docker VM
+#### 3.	Update the file start.sh located under Docker Toolbox installation path `i.e. “C:\Program Files\Docker Toolbox\start.sh”`,  to allocate required CPU, Memory and Storage to window docker virtual machine which is boot2docker VM
 	  - `Take the backup of start.sh file first`
 	  - `Find line ["${DOCKER_MACHINE}" create -d virtualbox $PROXY_ENV "${VM}"]`
 	  - `Comment this line and add below one:`
