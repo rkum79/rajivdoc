@@ -117,7 +117,7 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 
   - `# eval $(docker-machine.exe env default)`  
 
-  - Downloade docker-compose.yml file under “C:\Users\<NT-ID>”, using attached one
+  - Downloade docker-compose.yml file under `“C:\Users\<NT-ID>”`, using attached one
 
   - Run below command to create the multi container stack
 
@@ -134,6 +134,8 @@ https://docs.docker.com/toolbox/toolbox_install_windows
   - Login as **UserName:** `hybris`  & **Password:** `hybris123`
   
   - From GUI, you can access hybris from Firefox URL: http://hybris:9001/  & https://hybris:9002/
+  
+  - From your System, you can access hybris from Firefox URL: http://192.168.99.100:9001 & http://192.168.99.100:9002
   
   - Access container dashboard From Windows machine hit URL: http://192.168.99.100:9000
   
