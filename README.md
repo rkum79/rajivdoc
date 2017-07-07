@@ -58,13 +58,14 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 
 - `Double click on “Docker Quickstart Terminal”`
 	
-This will create one default named virtual machine in Oracle Virtual Box. You can open “Oracle VM VirtualBox” to validate the same
+- This will create one default named virtual machine in Oracle Virtual Box. You can open “Oracle VM VirtualBox” to validate the same
 	
-Validate the virtual machine resources configuration that was configured as part of step3. For this, go to 
-Inside “Oracle VM VirtualBox” select “default” VM
+- Validate the virtual machine resources configuration that was configured as part of step3. For this, go to 
 
-Right click on “Default” Settings System Under MotherBoard Tab (Check the Base Memory size, it should be 8000MB).  
-Within same System TabUnder Processor ( check #processor is set to 2) 
+- Inside “Oracle VM VirtualBox” select “default” VM
+
+- Right click on “Default” Settings System Under MotherBoard Tab (Check the Base Memory size, it should be 8000MB).  
+- Within same System TabUnder Processor ( check #processor is set to 2) 
 
 #### 6.	Steps to share folder (which we created in prerequisite section) from Windows drive to virtual machine:
 
