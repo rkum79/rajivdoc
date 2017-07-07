@@ -2,16 +2,18 @@
 
 ## PREREQUISITES : 
 1.	Developer system should have at least 16 GB RAM.
+
 2.	Virtualization should be enabled in Laptop/Desktop BIOS.
+
 3.	Create below listed 4 directories under D:
+
 	- **NOTE:** _These directories are used to provide data persistency at the container level & also in sandbox folder your codes are available [e. g. D:/Whirlpool/sandbox/extensions , D:/Whirlpool/sandbox/config etc..] ._
 	 - `D:/Whirlpool/log`
 	 - `D:/Whirlpool/ApacheLog`
 	 - `D:/Whirlpool/hybris_data`
 	 - `D:/Whirlpool/sandbox`
+
 4.	“Docker Tool Version” – 17.03.1 and above & “Oracle VM VirtualBox” – 5.1.18 and above. If you have the earlier version, recommend to uninstall both of them and install and configure the system following Step III
-
-
 
 
 ## INSTALLATION STEPS:
@@ -19,30 +21,40 @@
 	
 A.	Steps for Docker installation and configuration :
 
-	1.	Download and install latest stable Docker Toolbox on your Windows machine using below URL. Go with default settings
+   - 1.	Download and install latest stable Docker Toolbox on your Windows machine using below URL. Go with default settings
 https://docs.docker.com/toolbox/toolbox_install_windows
-Note: if your system already have Docker Toolbox setup in place, than make sure that you have ‘Oracle VM Virtual Box” version equal or higher than 5.1.18 and boot2docker version higher than v17.04.0. if not, than recommended to uninstall it and re-install the latest version, as new boot2docker VM ships with features that we are leveraging in our setup.
-	2.	Docker toolbox includes below listed tools:
-	Oracle Virtual box - where virtual machines gets created
-	Kitematic GUI - GUI to manage docker containers
-	Docker machine –to create virtual machines in Virtual box
-	Docker Quickstart terminal – Preconfigured terminal to access Docker Engine over CLI
-	Docker engine exe – Running docker Server 
-	3.	Update the file start.sh located under Docker Toolbox installation path i.e. “C:\Program Files\Docker Toolbox\start.sh”,  to allocate required CPU, Memory and Storage to window docker virtual machine which is boot2docker VM
-	Take the backup of start.sh file first
-	Find line ["${DOCKER_MACHINE}" create -d virtualbox $PROXY_ENV "${VM}"]
-	Comment this line and add below one:
-	 ["${DOCKER_MACHINE}" create -d virtualbox --virtualbox-memory "8000" --virtualbox-cpu-count "2" --virtualbox-disk-size "50000"  $PROXY_ENV "${VM}"]
-	 Save the file
-	4.	Take the backup of config.json file first & Update config.json file located at “C:\Users\<NT-ID>\.docker\machine\machines\default” and add [“del2vmplidoweb01:80”] under “InsecureRegistry”: [ ] section, final syntax is like :-
-"InsecureRegistry": [
+
+   - **Note:** if your system already have Docker Toolbox setup in place, than make sure that you have ‘Oracle VM Virtual Box” version equal or higher than 5.1.18 and boot2docker version higher than v17.04.0. if not, than recommended to uninstall it and re-install the latest version, as new boot2docker VM ships with features that we are leveraging in our setup.
+	
+   - 2.	Docker toolbox includes below listed tools:
+   
+    - `Oracle Virtual box - where virtual machines gets created`
+	- `Kitematic GUI - GUI to manage docker containers`
+	- `Docker machine –to create virtual machines in Virtual box`
+	- `Docker Quickstart terminal – Preconfigured terminal to access Docker Engine over CLI`
+	- `Docker engine exe – Running docker Server`
+	
+   - 3.	Update the file start.sh located under Docker Toolbox installation path i.e. “C:\Program Files\Docker Toolbox\start.sh”,  to allocate required CPU, Memory and Storage to window docker virtual machine which is boot2docker VM
+	- `Take the backup of start.sh file first`
+	- `Find line ["${DOCKER_MACHINE}" create -d virtualbox $PROXY_ENV "${VM}"]`
+	- `Comment this line and add below one:`
+```
+	 ["${DOCKER_MACHINE}" create -d virtualbox --virtualbox-memory "8000" --virtualbox-cpu-count "2" --virtualbox-disk-size "50000"  $PROXY_ENV "${VM}"]
+```
+	- `Save the file`
+   - 4.	Take the backup of config.json file first & Update config.json file located at “C:\Users\<NT-ID>\.docker\machine\machines\default” and add [“del2vmplidoweb01:80”] under “InsecureRegistry”: [ ] section, final syntax is like :-
+```
+   "InsecureRegistry": [
                 "del2vmplidoweb01:80"
             ],
-Doing this we are allowing docker engine to download the images from untrusted docker registry.
-	5.	Once Step 3 is completed, then go to the Desktop 
-	Double click on “Docker Quickstart Terminal”
-	This will create one default named virtual machine in Oracle Virtual Box. You can open “Oracle VM VirtualBox” to validate the same
-	Validate the virtual machine resources configuration that was configured as part of step3. For this, go to 
+```
+   Doing this we are allowing docker engine to download the images from untrusted docker registry.
+	
+	- 5.	Once Step 3 is completed, then go to the Desktop
+	
+	- `Double click on “Docker Quickstart Terminal”`
+	This will create one default named virtual machine in Oracle Virtual Box. You can open “Oracle VM VirtualBox” to validate the same
+	Validate the virtual machine resources configuration that was configured as part of step3. For this, go to 
 	Inside “Oracle VM VirtualBox” select “default” VM
 	Right click on “Default” Settings System Under MotherBoard Tab (Check the Base Memory size, it should be 8000MB).  
 	Within same System TabUnder Processor ( check #processor is set to 2) 
