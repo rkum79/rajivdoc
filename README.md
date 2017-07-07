@@ -4,12 +4,12 @@
 1.	Developer system should have at least 16 GB RAM.
 2.	Virtualization should be enabled in Laptop/Desktop BIOS.
 3.	Create below listed 4 directories under D:
-	- NOTE: _These directories are used to provide data persistency at the container level & also in sandbox folder your codes are available [e. g. D:/Whirlpool/sandbox/extensions , D:/Whirlpool/sandbox/config etc..] ._
-	 - `a.	D:/Whirlpool/log`
-	 - `b.	D:/Whirlpool/ApacheLog`
-	 - `c.	D:/Whirlpool/hybris_data`
-	 - `d.	D:/Whirlpool/sandbox`
-	4.	“Docker Tool Version” – 17.03.1 and above & “Oracle VM VirtualBox” – 5.1.18 and above. If you have the earlier version, recommend to uninstall both of them and install and configure the system following Step III
+	- **NOTE:** _These directories are used to provide data persistency at the container level & also in sandbox folder your codes are available [e. g. D:/Whirlpool/sandbox/extensions , D:/Whirlpool/sandbox/config etc..] ._
+	 - `D:/Whirlpool/log`
+	 - `D:/Whirlpool/ApacheLog`
+	 - `D:/Whirlpool/hybris_data`
+	 - `D:/Whirlpool/sandbox`
+4.	“Docker Tool Version” – 17.03.1 and above & “Oracle VM VirtualBox” – 5.1.18 and above. If you have the earlier version, recommend to uninstall both of them and install and configure the system following Step III
 
 
 
