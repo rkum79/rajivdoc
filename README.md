@@ -36,20 +36,21 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 ```
 	
 #### 3.	Update the file start.sh located under Docker Toolbox installation path `i.e. “C:\Program Files\Docker Toolbox\start.sh”`,  to allocate required CPU, Memory and Storage to window docker virtual machine which is boot2docker VM
-	* Take the backup of start.sh file first
-	* Find line `["${DOCKER_MACHINE}" create -d virtualbox $PROXY_ENV "${VM}"]`
-	* Comment this line and add below one:
+..* Take the backup of start.sh file first
+..* Find line `["${DOCKER_MACHINE}" create -d virtualbox $PROXY_ENV "${VM}"]`
+..* Comment this line and add below one:
 ```
 ["${DOCKER_MACHINE}" create -d virtualbox --virtualbox-memory "8000" --virtualbox-cpu-count "2" --virtualbox-disk-size "50000"  $PROXY_ENV "${VM}"]
 ```
-	* Save the file
-   #### 4.	Take the backup of config.json file first & Update config.json file located at “C:\Users\<NT-ID>\.docker\machine\machines\default” and add [“del2vmplidoweb01:80”] under “InsecureRegistry”: [ ] section, final syntax is like :-
+..* Save the file
+
+#### 4.	Take the backup of config.json file first & Update config.json file located at “C:\Users\<NT-ID>\.docker\machine\machines\default” and add [“del2vmplidoweb01:80”] under “InsecureRegistry”: [ ] section, final syntax is like :-
 ```
    "InsecureRegistry": [
                 "del2vmplidoweb01:80"
             ],
 ```
-   Doing this we are allowing docker engine to download the images from untrusted docker registry.
+`Doing this we are allowing docker engine to download the images from untrusted docker registry.`
 	
 	#### 5.	Once Step 3 is completed, then go to the Desktop
 
