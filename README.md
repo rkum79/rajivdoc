@@ -94,9 +94,9 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 #### 9.	Once all containers created and started, follow the below instructions to access different sections
   - Access GUI using your docker-machine IP Open “mstsc”, enter 192.168.99.100:3389 and GUI will be opened
 
-    - ` **Note:** _There could be chance that you may get different IP and not   192.168.99.100. You can find your docker-machine IP when you open the “Docker Quickstart Terminal”. Use the IP that your docker-machine is associated to in order to access your docker applications_.`
+    - **Note:** `_There could be chance that you may get different IP and not   192.168.99.100. You can find your docker-machine IP when you open the “Docker Quickstart Terminal”. Use the IP that your docker-machine is associated to in order to access your docker applications_.`
 
-  - Login as UserName: `hybris`  & Password: `hybris123`
+  - Login as **UserName:** `hybris`  & **Password:** `hybris123`
   
   - From GUI, you can access hybris from Firefox URL: http://hybris:9001/  & https://hybris:9002/
   
@@ -105,5 +105,5 @@ https://docs.docker.com/toolbox/toolbox_install_windows
  	- Set the password
  	- Login using above created password
 	
-  - Once logged in choose `“Manage the Docker instance where Portainer is running”` and then click on connect button.
+  - Once logged in choose `“Manage the Docker instance where Portainer is running”` and then click on `"connect"` button.
   
