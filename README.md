@@ -86,14 +86,15 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 ```
   
 #### 8.	Now go to the Docker Quickstart Terminal and run below command to set the environment
-  - # eval $(docker-machine.exe env default)  
+  - `# eval $(docker-machine.exe env default)`  
   - Downloade docker-compose.yml file under “C:\Users\<NT-ID>”, using attached one
   - Run below command to create the multi container stack
-  - # docker-compose.exe up -d
+  - `# docker-compose.exe up -d`
 
 #### 9.	Once all containers created and started, follow the below instructions to access different sections
-	Access GUI using your docker-machine IP Open “mstsc”, enter 192.168.99.100:3389 and GUI will be opened
- 	Note: There could be chance that you may get different IP and not   192.168.99.100. You can find your docker-machine IP when you open the “Docker Quickstart Terminal”. Use the IP that your docker-machine is associated to in order to access your docker applications.
+  - Access GUI using your docker-machine IP Open “mstsc”, enter 192.168.99.100:3389 and GUI will be opened
+ 	
+	 - `Note: There could be chance that you may get different IP and not   192.168.99.100. You can find your docker-machine IP when you open the “Docker Quickstart Terminal”. Use the IP that your docker-machine is associated to in order to access your docker applications.`
 	Login as username: hybris  & password: hybris123
 	From GUI, you can access hybris from Firefox URL: http://hybris:9001/  & https://hybris:9002/
 	Access container dashboard From Windows machine hit URL: http://192.168.99.100:9000
