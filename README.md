@@ -62,19 +62,20 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 	
 - Validate the virtual machine resources configuration that was configured as part of step3. For this, go to 
 
-- Inside “Oracle VM VirtualBox” select “default” VM
+- Inside `“Oracle VM VirtualBox”` select `“default”` VM
 
 - Right click on `“Default”` ~ `Settings` ~ `System` ~ `Under MotherBoard Tab` (Check the Base Memory size, it should be 8000MB).  
-- Within same System TabUnder Processor ( check #processor is set to 2) 
+- Within same `System Tab` `Under Processor` ( check #processor is set to 2) 
 
 #### 6.	Steps to share folder (which we created in prerequisite section) from Windows drive to virtual machine:
 
-	Go to “Oracle VM Virtual Box” console
-	First stop the “default” named virtual machine
-	Select “default” named virtual machine and then click on “Settings” button
-	Select “Shared Folders” and start adding using “Plus +” button, Locate the folders which you created as part of “Pre-requisite” section. Make sure to choose the “Auto-mount” options while adding shared storage
-	Add all 4 shared folder, once done start the “default”  virtual machine by right-click  StartNormal Start
-                7.             Please add the below DB properties in local.propreties file
+- Go to `**“Oracle VM Virtual Box”**` console
+- First stop the “default” named virtual machine
+- Select “default” named virtual machine and then click on “Settings” button
+- Select “Shared Folders” and start adding using “Plus +” button, Locate the folders which you created as part of “Pre-requisite” section. Make sure to choose the “Auto-mount” options while adding shared storage
+- Add all 4 shared folder, once done start the “default”  virtual machine by right-click  StartNormal Start
+
+####7.             Please add the below DB properties in local.propreties file
 	Open the local.properties file located at “D:\Whirlpool\sandbox\config\local\” and add the below line
 #ORACLE DB SETTINGS
 db.url=jdbc:oracle:thin:@oraclexewhp:1521:xe
