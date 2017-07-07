@@ -93,19 +93,17 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 
 #### 9.	Once all containers created and started, follow the below instructions to access different sections
   - Access GUI using your docker-machine IP Open “mstsc”, enter 192.168.99.100:3389 and GUI will be opened
- 	
-	 - `Note: There could be chance that you may get different IP and not   192.168.99.100. You can find your docker-machine IP when you open the “Docker Quickstart Terminal”. Use the IP that your docker-machine is associated to in order to access your docker applications.`
-	Login as username: hybris  & password: hybris123
-	From GUI, you can access hybris from Firefox URL: http://hybris:9001/  & https://hybris:9002/
-	Access container dashboard From Windows machine hit URL: http://192.168.99.100:9000
- 	Set the password
- 	Login using above created password
- 	Once logged in choose “Manage the Docker instance where Portainer is running” and then click on connect button
-              10.                    Please add the host entry in your system hosts file located at “C:\Windows\System32\drivers\etc”
-                                                       192.168.99.100 sapdocker.whirlpool.com
-                                        URLS : 
-	https://sapdocker.whirlpool.com/ws
-	https://sapdocker.whirlpool.com/store
-	http://192.168.99.100:9001
-	https://192.168.99.100:9002
- Note : There could be chance that you may get different IP and not   192.168.99.100. You can find your docker-machine IP when you open the “Docker Quickstart Terminal”. Use the IP that your docker-machine
+
+    - ` **Note:** _There could be chance that you may get different IP and not   192.168.99.100. You can find your docker-machine IP when you open the “Docker Quickstart Terminal”. Use the IP that your docker-machine is associated to in order to access your docker applications_.`
+
+  - Login as UserName: `hybris`  & Password: `hybris123`
+  
+  - From GUI, you can access hybris from Firefox URL: http://hybris:9001/  & https://hybris:9002/
+  
+  - Access container dashboard From Windows machine hit URL: http://192.168.99.100:9000
+  
+ 	- Set the password
+ 	- Login using above created password
+	
+  - Once logged in choose `“Manage the Docker instance where Portainer is running”` and then click on connect button.
+  
