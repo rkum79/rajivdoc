@@ -69,8 +69,8 @@ https://docs.docker.com/toolbox/toolbox_install_windows
 
 #### 6.	Steps to share folder (which we created in prerequisite section) from Windows drive to virtual machine:
 
-- Go to `**“Oracle VM Virtual Box”**` console
-- First stop the “default” named virtual machine
+- Go to `_“Oracle VM Virtual Box”_` console
+- First stop the `_“default”_` named virtual machine
 - Select “default” named virtual machine and then click on “Settings” button
 - Select “Shared Folders” and start adding using “Plus +” button, Locate the folders which you created as part of “Pre-requisite” section. Make sure to choose the “Auto-mount” options while adding shared storage
 - Add all 4 shared folder, once done start the “default”  virtual machine by right-click  StartNormal Start
