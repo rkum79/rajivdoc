@@ -1,10 +1,12 @@
-HYBRIS SANDBOX DOCKER SETUP
-PREREQUISITES
-                1.	Developer system should have at least 16 GB RAM.
+# HYBRIS SANDBOX DOCKER SETUP
+
+## PREREQUISITES
+    1.	Developer system should have at least 16 GB RAM.
 	2.	Virtualization should be enabled in Laptop/Desktop BIOS.
 	3.	Create below listed 4 directories under D:
-                     NOTE: these directories are used to provide data persistency at the container level & also in sandbox folder your codes are available [e. g. D:/Whirlpool/sandbox/extensions , D:/Whirlpool/sandbox/config etc..]
-		a.	D:/Whirlpool/log
+	
+    `NOTE:` these directories are used to provide data persistency at the container level & also in sandbox folder your codes are available [e. g. D:/Whirlpool/sandbox/extensions , D:/Whirlpool/sandbox/config etc..]
+	    a.	D:/Whirlpool/log
 		b.	D:/Whirlpool/ApacheLog
 		c.	D:/Whirlpool/hybris_data
 		d.	D:/Whirlpool/sandbox
@@ -13,7 +15,7 @@ PREREQUISITES
 
 
 
-INSTALLATION STEPS:
+## INSTALLATION STEPS:
 
 	
 A.	Steps for Docker installation and configuration :
