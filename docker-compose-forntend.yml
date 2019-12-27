@@ -10,7 +10,7 @@ services:
      - 80:4200
     volumes:
       - type: bind
-        source: ./app.module.ts
+        source: /app/app.module.ts
         target: /app/spartacus/src/app/app.module.ts
     sysctls:
       - kernel.shmmax=1073741824
