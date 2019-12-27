@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+
+  FRONTEND_SERVER:
+    image: delvmplspoadm3.sapient.com:5000/v2/forntendsap:v01
+    restart: on-failure
+    container_name: frontend
+    ports:
+     - 80:4200
+    volumes:
+      - type: bind
+        source: /app/app.module.ts
+        target: /app/spartacus/src/app/app.module.ts
+    sysctls:
+      - kernel.shmmax=1073741824
+      - kernel.shmmni=524288
+      - kernel.shmall=8388608
+      - net.ipv4.ip_local_port_range=40000 60999
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 1048576
+        hard: 1048576
+
+volumes:
+  hybris_data:
+    driver: local
