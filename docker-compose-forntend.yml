@@ -8,10 +8,6 @@ services:
     container_name: frontend
     ports:
      - 80:4200
-    volumes:
-      - type: bind
-        source: /app/app.module.ts
-        target: /app/spartacus/src/app/app.module.ts
     sysctls:
       - kernel.shmmax=1073741824
       - kernel.shmmni=524288
