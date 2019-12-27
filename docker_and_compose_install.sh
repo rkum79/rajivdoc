@@ -3,9 +3,9 @@ set -e
 
 # Alternatively you can use the official docker install script
 #wget -qO- https://get.docker.com/ | bash
-
+sudo usermod -aG docker Simon
 # Install docker-compose
-VERSION=$(curl -s -o /dev/null -I -w "%{redirect_url}\n" https://github.com/docker/compose/releases/latest | grep -oP "[0-9]+(\.[0-9]+)+$")
-curl -L https://github.com/docker/compose/releases/download/$COMPOSE_VER/docker-compose-$(uname -s)-$(uname -m) > /usr/local/bin/docker-compose
-#chmod +x /usr/local/bin/docker-compose
-#docker-compose --version
+COMPOSE_VER=$(curl -s -o /dev/null -I -w "%{redirect_url}\n" https://github.com/docker/compose/releases/latest | grep -oP "[0-9]+(\.[0-9]+)+$")
+curl -o /usr/local/bin/docker-compose -L https://github.com/docker/compose/releases/download/$COMPOSE_VER/docker-compose-$(uname -s)-$(uname -m)
+chmod 755 /usr/local/bin/docker-compose
+docker-compose --version
