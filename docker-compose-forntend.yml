@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   FRONTEND_SERVER:
-    image: delvmplspoadm3.sapient.com:5000/v2/forntendsap:v01
+    image: publicissapient1905.azurecr.io/forntendsap:v01
     restart: on-failure
     container_name: frontend
     ports:
