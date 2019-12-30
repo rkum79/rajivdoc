@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   FRONTEND_SERVER:
-    image: publicissapient1905.azurecr.io/forntendsap:v01
+    image: publicissapient1905.azurecr.io/forntendsap:v04
     restart: on-failure
     container_name: frontend
     ports:
