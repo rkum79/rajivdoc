@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   BACKEND_SERVER:
-    image: publicissapient1905.azurecr.io/hybrissap1905:v01
+    image: publicissapient1905.azurecr.io/hybrissap1905:v03
     restart: on-failure
     container_name: hybris
     ports:
